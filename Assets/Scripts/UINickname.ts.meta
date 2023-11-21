@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: cdd04801926b17a499c48cacfb4a4a78
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nclass UINickname extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Init(sessionId, nickname, canvas) {\\r\\n        this.canvas = canvas;\\r\\n       
+    this.textNick.text = nickname;\\r\\n        this.character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(sessionId).character;\\r\\n       
+    this.StartCoroutine(this.UpdatePosition());\\r\\n    }\\r\\n    *UpdatePosition()
+    {\\r\\n        while (true) {\\r\\n            yield null;\\r\\n            //TODO
+    : \uD50C\uB808\uC774\uC5B4\uC5D0 \uC788\uB294 nicknamePoint\uB97C \uCC3E\uAC8C
+    \uC218\uC815 \\r\\n            const nicknamePoint = UnityEngine_1.GameObject.Find(\\\"nicknamePoint\\\").transform;\\r\\n           
+    //const nicknamePoint = this.character.transform.Find(\\\"nicknamePoint\\\");\\r\\n           
+    //overlay \\r\\n            let screenPoint = UnityEngine_1.RectTransformUtility.WorldToScreenPoint(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera,
+    nicknamePoint.position);\\r\\n            this.transform.position = new UnityEngine_1.Vector3(screenPoint.x,
+    screenPoint.y, 0);\\r\\n            //ui camera \\r\\n            //Canvas\uC758
+    Render Mode\uAC00 Screen Space - Camera \uC77C\uACBD\uC6B0 \\r\\n           
+    // const uiCam = GameObject.FindGameObjectWithTag(\\\"UICamera\\\").GetComponent<Camera>();\\r\\n           
+    // const screenPoint = RectTransformUtility.WorldToScreenPoint(uiCam, nicknamePoint.position);\\r\\n           
+    // const canvasRectTransform = this.canvas.GetComponent<RectTransform>();\\r\\n           
+    // let ref = $ref<Vector2>();\\r\\n            //\\r\\n            // if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform,
+    screenPoint, uiCam, ref))\\r\\n            // {\\r\\n            //     let localPoint
+    = $unref(ref);\\r\\n            //    this.GetComponent<RectTransform>().localPosition
+    = new Vector3(localPoint.x, localPoint.y, 0);\\r\\n            // }\\r\\n       
+    }\\r\\n    }\\r\\n}\\r\\nexports.default = UINickname;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlOaWNrbmFtZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlVJTmlja25hbWUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkVBQTRFO0FBRTVFLDZDQUF5SDtBQUN6SCxNQUFxQixVQUFXLFNBQVEscUNBQXFCO0lBS2xELElBQUksQ0FBQyxTQUFrQixFQUFFLFFBQWlCLEVBQUUsTUFBZTtRQUM5RCxJQUFJLENBQUMsTUFBTSxHQUFHLE1BQU0sQ0FBQztRQUNyQixJQUFJLENBQUMsUUFBUSxDQUFDLElBQUksR0FBRyxRQUFRLENBQUM7UUFDOUIsSUFBSSxDQUFDLFNBQVMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLENBQUMsU0FBUyxDQUFDO1FBQ3ZFLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDLENBQUM7SUFDL0MsQ0FBQztJQUVELENBQUMsY0FBYztRQUNYLE9BQU0sSUFBSSxFQUFDO1lBQ1AsTUFBTSxJQUFJLENBQUM7WUFFcUMsdUNBQXVDO1lBQ3ZGLE1BQU0sYUFBYSxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxDQUFDLFNBQVMsQ0FBQztZQUNqRSx1RUFBdUU7WUFFdkUsVUFBVTtZQUNWLElBQUksV0FBVyxHQUNYLGtDQUFvQixDQUFDLGtCQUFrQixDQUFDLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxNQUFNLEVBQUUsYUFBYSxDQUFDLFFBQVEsQ0FBQyxDQUFDO1lBQ2hILElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUkscUJBQU8sQ0FBQyxXQUFXLENBQUMsQ0FBQyxFQUFFLFdBQVcsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUM7WUFFdkUsWUFBWTtZQUNaLGlEQUFpRDtZQUNqRCxxRkFBcUY7WUFDckYsOEZBQThGO1lBQzlGLHlFQUF5RTtZQUN6RSw2QkFBNkI7WUFDN0IsRUFBRTtZQUNGLDZHQUE2RztZQUM3RyxJQUFJO1lBQ0osb0NBQW9DO1lBQ3BDLG9HQUFvRztZQUNwRyxJQUFJO1NBQ1A7SUFDTCxDQUFDO0NBQ0o7QUF2Q0QsNkJBdUNDIn0=\",\"assetPath\":\"Assets/Scripts/UINickname.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"Unity.TextMeshPro\",\"name\":\"textNick\",\"type\":\"TMPro.TMP_Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UIModule\",\"name\":\"canvas\",\"type\":\"UnityEngine.Canvas\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"UINickname\",\"description\":\"\",\"hasAnimatorMove\":false},\"isCompiled\":true}"
+  typescriptHash: 263d82c2f777123e23a47f24719bfafe
+  onlyWriteTrigger: 0
