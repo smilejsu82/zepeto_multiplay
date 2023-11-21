@@ -1,0 +1,41 @@
+fileFormatVersion: 2
+guid: 913b7529685f45e4f99e2f3b05d9a765
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nclass Scaffolding extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor() {\\r\\n       
+    super(...arguments);\\r\\n        this.isPushed = false;\\r\\n    }\\r\\n   
+    Start() {\\r\\n        this.renderer = this.GetComponent($typeof(UnityEngine_1.MeshRenderer));\\r\\n   
+    }\\r\\n    OnTriggerEnter(col) {\\r\\n        if (col.CompareTag(\\\"Player\\\")
+    && this.isPushed == false) {\\r\\n            console.log('\uBC1C\uD310\uC744
+    \uBC1F\uC558\uC2B5\uB2C8\uB2E4.');\\r\\n            this.isPushed = true;\\r\\n           
+    this.renderer.material = this.arrMat[1]; //green\\r\\n        }\\r\\n    }\\r\\n   
+    OnTriggerStay(col) {\\r\\n        if (col.CompareTag(\\\"Player\\\") && this.isPushed
+    == false) {\\r\\n            console.log('\uBC1C\uD310\uC744 \uBC1F\uACE0\uC788\uC2B5\uB2C8\uB2E4.');\\r\\n           
+    this.isPushed = true;\\r\\n            this.renderer.material = this.arrMat[1];
+    //green\\r\\n        }\\r\\n    }\\r\\n    OnTriggerExit(col) {\\r\\n       
+    if (col.CompareTag(\\\"Player\\\") && this.isPushed == true) {\\r\\n           
+    console.log('\uBC1C\uD310\uC5D0\uC11C \uBC97\uC5B4\uB0AC\uC2B5\uB2C8\uB2E4.');\\r\\n           
+    this.isPushed = false;\\r\\n            this.renderer.material = this.arrMat[0];
+    //white\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = Scaffolding;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2NhZmZvbGRpbmcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTY2FmZm9sZGluZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2Q0FBOEQ7QUFDOUQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUE5RDs7UUFFWSxhQUFRLEdBQWEsS0FBSyxDQUFDO0lBb0N2QyxDQUFDO0lBakNHLEtBQUs7UUFDRCxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxZQUFZLFNBQUMsMEJBQVksRUFBRyxDQUFDO0lBQ3RELENBQUM7SUFFRCxjQUFjLENBQUMsR0FBYztRQUV6QixJQUFHLEdBQUcsQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLElBQUksSUFBSSxDQUFDLFFBQVEsSUFBSSxLQUFLLEVBQ3JEO1lBQ0ksT0FBTyxDQUFDLEdBQUcsQ0FBQyxZQUFZLENBQUMsQ0FBQztZQUMxQixJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztZQUNyQixJQUFJLENBQUMsUUFBUSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUksT0FBTztTQUN0RDtJQUNMLENBQUM7SUFFRCxhQUFhLENBQUMsR0FBYztRQUV4QixJQUFHLEdBQUcsQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLElBQUksSUFBSSxDQUFDLFFBQVEsSUFBSSxLQUFLLEVBQ3JEO1lBQ0ksT0FBTyxDQUFDLEdBQUcsQ0FBQyxhQUFhLENBQUMsQ0FBQztZQUMzQixJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztZQUNyQixJQUFJLENBQUMsUUFBUSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUksT0FBTztTQUN0RDtJQUNMLENBQUM7SUFFRCxhQUFhLENBQUUsR0FBYztRQUN6QixJQUFHLEdBQUcsQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLElBQUksSUFBSSxDQUFDLFFBQVEsSUFBSSxJQUFJLEVBQ3BEO1lBQ0ksT0FBTyxDQUFDLEdBQUcsQ0FBQyxjQUFjLENBQUMsQ0FBQztZQUM1QixJQUFJLENBQUMsUUFBUSxHQUFHLEtBQUssQ0FBQztZQUN0QixJQUFJLENBQUMsUUFBUSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUksT0FBTztTQUN0RDtJQUNMLENBQUM7Q0FFSjtBQXRDRCw4QkFzQ0MifQ==\",\"assetPath\":\"Assets/Scripts/Scaffolding.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"arrMat\",\"type\":\"UnityEngine.Material[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Scaffolding\",\"description\":\"\",\"hasAnimatorMove\":false},\"isCompiled\":true}"
+  typescriptHash: b8c3b4f4707b9fe6129a72bbba7502ec
+  onlyWriteTrigger: 0

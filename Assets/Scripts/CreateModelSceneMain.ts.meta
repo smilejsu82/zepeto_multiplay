@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: b8c196ef0cd6af046878b006fd6a8e28
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nclass
+    CreateModelSceneMain extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        //ZepetoPlayers.instance.CreatePlayerWithZepetoId(\"smilejsu82\",
+    new SpawnInfo(), true);\r\n        // Create a `ZepetoCharacter` using ZepetoId\r\n       
+    // ZepetoCharacterCreator.CreateByZepetoId(\"smilejsu82\", \r\n        //    
+    new SpawnInfo(), (character: ZepetoCharacter) => {\r\n        // });\r\n       
+    //Create a `ZepetoCharacterModel` using ZepetoId\r\n        ZEPETO_Character_Controller_1.ZepetoCharacterCreator.CreateModelByZepetoId(\"smilejsu82\",
+    new ZEPETO_Character_Controller_1.SpawnInfo(), (go) => {\r\n            console.log(go);\r\n           
+    this.characterGo = go;\r\n            const animator = this.characterGo.GetComponentInChildren($typeof(UnityEngine_1.Animator));\r\n           
+    animator.runtimeAnimatorController =\r\n                UnityEngine_1.Resources.Load(\"ZepetoAnimatorV2\");\r\n           
+    if (__UnityEngine__.Object.op_Inequality(this.characterGo, null)) {\r\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.SetFollowTarget(this.characterGo.transform);\r\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.enabled = true;\r\n           
+    }\r\n        });\r\n    }\r\n    Update() {\r\n        //console.log(`characterGo:
+    ${this.characterGo}`);\r\n        if (this.characterGo != undefined) {\r\n           
+    let h = UnityEngine_1.Input.GetAxisRaw(\"Horizontal\");\r\n            let v
+    = UnityEngine_1.Input.GetAxisRaw(\"Vertical\");\r\n            const dir = new
+    UnityEngine_1.Vector3(h, 0, v).normalized;\r\n            console.log(dir);\r\n           
+    this.characterGo.transform.Translate(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.op_Multiply(dir,
+    this.speed), UnityEngine_1.Time.deltaTime));\r\n        }\r\n    }\r\n}\r\nexports.default
+    = CreateModelSceneMain;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ3JlYXRlTW9kZWxTY2VuZU1haW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJDcmVhdGVNb2RlbFNjZW5lTWFpbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSxpREFBcUQ7QUFDckQsNkVBQThHO0FBQzlHLDZDQUE4RztBQUM5RyxNQUFxQixvQkFBcUIsU0FBUSxxQ0FBcUI7SUFJbkUsS0FBSztRQUVELHVGQUF1RjtRQUV2Riw0Q0FBNEM7UUFDNUMseURBQXlEO1FBQ3pELHlEQUF5RDtRQUN6RCxNQUFNO1FBRU4sZ0RBQWdEO1FBQ2hELG9EQUFzQixDQUFDLHFCQUFxQixDQUFDLFlBQVksRUFBRSxJQUFJLHVDQUFTLEVBQUUsRUFBRSxDQUFDLEVBQUUsRUFBRSxFQUFFO1lBQy9FLE9BQU8sQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLENBQUM7WUFDaEIsSUFBSSxDQUFDLFdBQVcsR0FBRyxFQUFFLENBQUM7WUFFdEIsTUFBTSxRQUFRLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxzQkFBc0IsU0FBQyxzQkFBUSxFQUFHLENBQUM7WUFDckUsUUFBUSxDQUFDLHlCQUF5QjtnQkFDOUIsdUJBQVMsQ0FBQyxJQUFJLENBQTRCLGtCQUFrQixDQUFDLENBQUM7WUFFbEUsMkJBd0IydFMsYUFBYyxDQXhCdHVTLElBQUksQ0FBQyxXQUFXLEVBQUksSUFBSSxHQUFDO2dCQUN4QiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsZUFBZSxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLENBQUM7Z0JBQ2hGLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO2FBQ3REO1FBRUwsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsTUFBTTtRQUVGLGtEQUFrRDtRQUVsRCxJQUFHLElBQUksQ0FBQyxXQUFXLElBQUksU0FBUyxFQUFDO1lBRTdCLElBQUksQ0FBQyxHQUFHLG1CQUFLLENBQUMsVUFBVSxDQUFDLFlBQVksQ0FBQyxDQUFDO1lBQ3ZDLElBQUksQ0FBQyxHQUFHLG1CQUFLLENBQUMsVUFBVSxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQ3JDLE1BQU0sR0FBRyxHQUFHLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQztZQUU1QyxPQUFPLENBQUMsR0FBRyxDQUFDLEdBQUcsQ0FBQyxDQUFDO1lBRWpCLElBQUksQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0EzQzRCLHFCQUFPLENBK0Nzam9CLFdBQVksQ0EvQ3prb0IscUJBQU8sQ0ErQ3Nqb0IsV0FBWSxDQUpwbW9CLEdBQUcsRUFBRyxJQUFJLENBQUMsS0FBSyxHQUFHLGtCQUFJLENBQUMsU0FBUyxFQUFDLENBQUM7U0FDM0U7SUFDTCxDQUFDO0NBRUo7QUE5Q0QsdUNBOENDIn0=","assetPath":"Assets/Scripts/CreateModelSceneMain.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"CreateModelSceneMain","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 4435d19185a08ed33c12960364bd55bb
+  onlyWriteTrigger: 0

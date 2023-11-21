@@ -14,6 +14,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     public multiplay : ZepetoWorldMultiplay;
     private room : Room;
     private currentPlayers : Map<string,Player> = new Map<string,Player>();
+    private nicknames : Map<string, GameObject> = new Map<string, GameObject>();
     public uiNicknamePrefab : GameObject;
     public canvas : Canvas;
     
@@ -133,6 +134,8 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                    player.OnChange += (ChangeValues)=> this.OnUpdatePlayer(sessionId, player);
                }
 
+               
+                   
                const playerController = zepetoPlayer.character.gameObject.AddComponent<PlayerController>();
                playerController.Init();
                
@@ -175,11 +178,18 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
         const uiNickname = go.GetComponent<UINickname>();
         uiNickname.Init(sessionId, player.name, this.canvas);
+
+        this.nicknames.set(sessionId, go);
     }
     
     private OnLeavePlayer(sessionId, player){
         
         console.log('OnLeavePlayer: ' + sessionId);
+        
+        const go = this.nicknames.get(sessionId);
+        Object.Destroy(go);
+        
+        this.nicknames.delete(sessionId);
         
         this.currentPlayers.delete(sessionId);
         ZepetoPlayers.instance.RemovePlayer(sessionId);

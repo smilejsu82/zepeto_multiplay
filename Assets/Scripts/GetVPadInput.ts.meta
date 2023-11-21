@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: 72f43cc8e9d9cdf4fb145258f3520b0a
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass GetVPadInput extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        // Add a listener for the event when a local player
+    is added\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.GetPadTouch();\r\n            this.GetJumpTouch();\r\n       
+    });\r\n    }\r\n    GetPadTouch() {\r\n        // Find the ZepetoScreenTouchpad
+    object in the scene\r\n        const touchPad = UnityEngine_1.Object.FindObjectOfType($typeof(ZEPETO_Character_Controller_1.ZepetoScreenTouchpad));\r\n       
+    // Add a listener for the drag event on the touchpad\r\n        touchPad.OnDragEvent.AddListener(()
+    => {\r\n            // Log the position of the touch handle when a drag event
+    occurs\r\n            console.log(touchPad.touchHandle.transform.position);\r\n       
+    });\r\n    }\r\n    GetJumpTouch() {\r\n        // Find the ZepetoScreenButton
+    object in the scene\r\n        const screenButton = UnityEngine_1.Object.FindObjectOfType($typeof(ZEPETO_Character_Controller_1.ZepetoScreenButton));\r\n       
+    // Add a listener to the OnPointDownEvent of the screenButton\r\n        // This
+    listener logs \"Jump Button Down\" when the button is pressed\r\n        screenButton.OnPointDownEvent.AddListener(()
+    => {\r\n            console.log(\"Jump Button Down\");\r\n        });\r\n       
+    // Add a listener to the OnPointUpEvent of the screenButton\r\n        // This
+    listener logs \"Jump Button Up\" when the button is released\r\n        screenButton.OnPointUpEvent.AddListener(()
+    => {\r\n            console.log(\"Jump Button Up\");\r\n        });\r\n    }\r\n}\r\nexports.default
+    = GetVPadInput;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2V0VlBhZElucHV0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2V0VlBhZElucHV0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXFDO0FBQ3JDLDZFQUFzRztBQUN0RyxpREFBcUQ7QUFFckQsTUFBcUIsWUFBYSxTQUFRLHFDQUFxQjtJQUUzRCxLQUFLO1FBRUQsNERBQTREO1FBQzVELDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLFdBQVcsRUFBRSxDQUFDO1lBQ25CLElBQUksQ0FBQyxZQUFZLEVBQUUsQ0FBQztRQUN4QixDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCxXQUFXO1FBRVAsb0RBQW9EO1FBQ3BELE1BQU0sUUFBUSxHQUFHLG9CQUFNLENBQUMsZ0JBQWdCLFNBQUMsa0RBQW9CLEVBQUcsQ0FBQztRQUVqRSxvREFBb0Q7UUFDcEQsUUFBUSxDQUFDLFdBQVcsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ2xDLGdFQUFnRTtZQUNoRSxPQUFPLENBQUMsR0FBRyxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQ3pELENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELFlBQVk7UUFFUixrREFBa0Q7UUFDbEQsTUFBTSxZQUFZLEdBQUcsb0JBQU0sQ0FBQyxnQkFBZ0IsU0FBQyxnREFBa0IsRUFBRyxDQUFDO1FBRW5FLDZEQUE2RDtRQUM3RCxtRUFBbUU7UUFDbkUsWUFBWSxDQUFDLGdCQUFnQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFFM0MsT0FBTyxDQUFDLEdBQUcsQ0FBQyxrQkFBa0IsQ0FBQyxDQUFDO1FBQ3BDLENBQUMsQ0FBQyxDQUFDO1FBRUgsMkRBQTJEO1FBQzNELGtFQUFrRTtRQUNsRSxZQUFZLENBQUMsY0FBYyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFFekMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO1FBQ2xDLENBQUMsQ0FBQyxDQUFDO0lBRVAsQ0FBQztDQUVKO0FBNUNELCtCQTRDQyJ9","assetPath":"Assets/Scripts/GetVPadInput.ts","manifest":{"properties":[],"name":"GetVPadInput","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: ef6968879cfeb6c86c72dc0a8e0fe9ab
+  onlyWriteTrigger: 0
