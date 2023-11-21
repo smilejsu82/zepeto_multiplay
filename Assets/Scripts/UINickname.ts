@@ -17,10 +17,9 @@ export default class UINickname extends ZepetoScriptBehaviour {
     *UpdatePosition(){
         while(true){
             yield null;
-
-                                                            //TODO : 플레이어에 있는 nicknamePoint를 찾게 수정 
-            const nicknamePoint = GameObject.Find("nicknamePoint").transform;
-            //const nicknamePoint = this.character.transform.Find("nicknamePoint");
+            
+            //플레이어에 있는 nicknamePoint를 찾음  
+            const nicknamePoint = this.character.transform.Find("nicknamePoint");
            
             //overlay 
             let screenPoint : Vector2 = 

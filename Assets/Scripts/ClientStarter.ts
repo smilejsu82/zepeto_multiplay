@@ -7,6 +7,7 @@ import * as UnityEngine from 'UnityEngine'
 import { GameObject, Object, LayerMask, Canvas } from 'UnityEngine'
 import * as zepeto from "Zepeto";
 import UINickname from './UINickname'
+import PlayerController from './PlayerController'
 
 export default class ClientStarter extends ZepetoScriptBehaviour {
 
@@ -28,7 +29,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
             room.OnStateChange += this.OnStateChange;
         };
         
-        this.StartCoroutine(this.SendMessageLoop(0.1));
+        this.StartCoroutine(this.SendMessageLoop(0.05));
     }
     
     *SendMessageLoop(tick: number)
@@ -84,11 +85,15 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         const zepetoPlayer = ZepetoPlayers.instance.GetPlayer(sessionId);
         zepetoPlayer.character.MoveToPosition(position);
         
-        console.log(player.state);
-        console.log(player.state === CharacterState.JumpIdle);
-        console.log(player.state === CharacterState.JumpMove);
+        // console.log(player.state);  //104 -> 106 -> 1
+        // console.log(player.state === CharacterState.JumpIdle);  //false
+        // console.log(player.state === CharacterState.JumpMove);  //false
 
-        if(player.state === 104 || player.state === 106){
+        // 104 (Jump)
+        // 106 (Stamp)
+        // 1 (Idle)
+        
+        if(player.state === 104){   // || player.state === 106
         //if(player.state === CharacterState.JumpIdle || player.state === CharacterState.JumpMove){
             console.log("jump");
             zepetoPlayer.character.Jump();
@@ -120,11 +125,16 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
            }); 
            
            ZepetoPlayers.instance.OnAddedPlayer.AddListener((sessionId:string)=>{
-               const isLocal = this.room.SessionId === sessionId;
+               const isLocal = this.room.SessionId === sessionId;               
+               const zepetoPlayer = ZepetoPlayers.instance.GetPlayer(sessionId); //오브젝트)
                if(!isLocal){
+                   //스키마 (데이터)
                    const player = this.currentPlayers.get(sessionId);
                    player.OnChange += (ChangeValues)=> this.OnUpdatePlayer(sessionId, player);
                }
+
+               const playerController = zepetoPlayer.character.gameObject.AddComponent<PlayerController>();
+               playerController.Init();
                
                this.CreateUINickname(sessionId);
            });
@@ -157,12 +167,12 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         let localPosition = nicknamePoint.transform.localPosition;
         localPosition.y = 1.2;
         nicknamePoint.transform.localPosition = localPosition;
-        
+
         const go = Object.Instantiate<GameObject>(this.uiNicknamePrefab, this.canvas.transform);
         //go.transform.SetParent(this.canvas.transform);
         // go.transform.localPosition = Vector2.zero;
         // go.transform.localRotation = Vector2.zero;
-        
+
         const uiNickname = go.GetComponent<UINickname>();
         uiNickname.Init(sessionId, player.name, this.canvas);
     }

@@ -880,7 +880,7 @@ MonoBehaviour:
     horizontalDefaultController: {fileID: 2787167779785370926, guid: 9b7a03709461140b4b3fc85aa8c5d741, type: 3}
     controlMode: 0
   floatingUIData:
-    showNickNameLocalPlayer: 0
+    showNickNameLocalPlayer: 1
     showNickNameOtherPlayers: 1
     showBubbleChatLocalPlayer: 1
     showBubbleChatOtherPlayers: 1
