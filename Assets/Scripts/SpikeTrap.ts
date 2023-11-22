@@ -1,6 +1,7 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Animator, WaitForSeconds, GameObject } from 'UnityEngine'
 import Triggerable from './Triggerable'
+import PlayerController from './PlayerController'
 export default class SpikeTrap extends ZepetoScriptBehaviour {
 
     private anim : Animator;
@@ -13,7 +14,9 @@ export default class SpikeTrap extends ZepetoScriptBehaviour {
         this.triggerable = this.triggerableGo.GetComponent<Triggerable>();
         
         this.triggerable.onTriggerEnter = (col)=>{
-            console.log('====> ' + col.gameObject);   
+            console.log('====> ' + col.gameObject);
+
+            col.gameObject.GetComponent<PlayerController>().Teleport();
         };
         
         this.anim = this.GetComponent<Animator>();

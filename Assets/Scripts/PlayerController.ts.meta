@@ -22,7 +22,8 @@ ScriptedImporter:
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
     ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
     UnityEngine_1 = require(\"UnityEngine\");\r\nclass PlayerController extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    Init(sessionId) {\r\n        this.sessionId = sessionId;\r\n       
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.isTeleporting
+    = false;\r\n    }\r\n    Init(sessionId) {\r\n        this.sessionId = sessionId;\r\n       
     this.gameObject.tag = \"Player\";\r\n        // const col = this.gameObject.AddComponent<CapsuleCollider>();\r\n       
     // col.center = new Vector3(0, 0.5, 0);\r\n        // col.radius = 0.25;\r\n       
     // col.isTrigger = true;\r\n        //this.GetComponent<CharacterController>().enabled
@@ -31,7 +32,12 @@ ScriptedImporter:
     // this.character.OnUpdateState.AddListener((state)=>{\r\n        //     console.log(`[OnUpdateState]
     state: ${state}`);\r\n        // });\r\n        //\r\n        // this.character.OnChangedState.AddListener((cur,
     next)=>{\r\n        //     console.log(`[OnChangedState] cur: ${cur} , next:
-    ${next}`);\r\n        //     });\r\n    }\r\n}\r\nexports.default = PlayerController;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxheWVyQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlBsYXllckNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkVBQWdIO0FBQ2hILDZDQUFxRjtBQUNyRixNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFNeEQsSUFBSSxDQUFDLFNBQWtCO1FBRTFCLElBQUksQ0FBQyxTQUFTLEdBQUcsU0FBUyxDQUFDO1FBQzNCLElBQUksQ0FBQyxVQUFVLENBQUMsR0FBRyxHQUFHLFFBQVEsQ0FBQztRQUUvQiwrREFBK0Q7UUFDL0QsdUNBQXVDO1FBQ3ZDLHFCQUFxQjtRQUNyQix3QkFBd0I7UUFFeEIsMkRBQTJEO1FBRTNELElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFlBQVksU0FBQyw2Q0FBZSxFQUFHLENBQUM7UUFDdEQsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxZQUFZLFNBQUMsc0JBQVEsRUFBRyxDQUFDO1FBRTVELHNEQUFzRDtRQUN0RCxzREFBc0Q7UUFDdEQsTUFBTTtRQUNOLEVBQUU7UUFDRiwyREFBMkQ7UUFDM0QsbUVBQW1FO1FBQ25FLFVBQVU7SUFDZCxDQUFDO0NBQ0o7QUE3QkQsbUNBNkJDIn0=","assetPath":"Assets/Scripts/PlayerController.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"sessionId","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PlayerController","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 649f751f2ea79519c15d21ca99ffd430
+    ${next}`);\r\n        //     });\r\n    }\r\n    Teleport() {\r\n        if (this.isTeleporting
+    == false) {\r\n            this.isTeleporting = true;\r\n            this.StartCoroutine(this.CoTeleport());\r\n       
+    }\r\n    }\r\n    *CoTeleport() {\r\n        this.character.enabled = false;\r\n       
+    this.character.Teleport(new UnityEngine_1.Vector3(0, 0, 0), UnityEngine_1.Quaternion.identity);\r\n       
+    yield new UnityEngine_1.WaitForSeconds(0.5);\r\n        this.character.enabled
+    = true;\r\n        this.isTeleporting = false;\r\n    }\r\n}\r\nexports.default
+    = PlayerController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxheWVyQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlBsYXllckNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkVBQWdIO0FBQ2hILDZDQUFnSDtBQUNoSCxNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFBbkU7O1FBOEJZLGtCQUFhLEdBQUcsS0FBSyxDQUFDO0lBZ0JsQyxDQUFDO0lBeENVLElBQUksQ0FBQyxTQUFrQjtRQUUxQixJQUFJLENBQUMsU0FBUyxHQUFHLFNBQVMsQ0FBQztRQUMzQixJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsR0FBRyxRQUFRLENBQUM7UUFFL0IsK0RBQStEO1FBQy9ELHVDQUF1QztRQUN2QyxxQkFBcUI7UUFDckIsd0JBQXdCO1FBRXhCLDJEQUEyRDtRQUUzRCxJQUFJLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1FBQ3RELElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLENBQUMsWUFBWSxTQUFDLHNCQUFRLEVBQUcsQ0FBQztRQUU1RCxzREFBc0Q7UUFDdEQsc0RBQXNEO1FBQ3RELE1BQU07UUFDTixFQUFFO1FBQ0YsMkRBQTJEO1FBQzNELG1FQUFtRTtRQUNuRSxVQUFVO0lBQ2QsQ0FBQztJQUdNLFFBQVE7UUFFWCxJQUFHLElBQUksQ0FBQyxhQUFhLElBQUksS0FBSyxFQUFDO1lBQzNCLElBQUksQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFBO1lBQ3pCLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDLENBQUM7U0FDMUM7SUFDTCxDQUFDO0lBRUQsQ0FBQyxVQUFVO1FBQ1AsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLEdBQUcsS0FBSyxDQUFDO1FBQy9CLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsQ0FBQyxFQUFFLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDbkUsTUFBTSxJQUFJLDRCQUFjLENBQUMsR0FBRyxDQUFDLENBQUM7UUFDOUIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQzlCLElBQUksQ0FBQyxhQUFhLEdBQUcsS0FBSyxDQUFDO0lBQy9CLENBQUM7Q0FDSjtBQTlDRCxtQ0E4Q0MifQ==","assetPath":"Assets/Scripts/PlayerController.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"sessionId","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PlayerController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 39a59a7509eb09e477a92fe2276a3722
   onlyWriteTrigger: 0
