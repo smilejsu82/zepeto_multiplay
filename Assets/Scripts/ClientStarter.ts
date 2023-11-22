@@ -30,7 +30,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
             room.OnStateChange += this.OnStateChange;
         };
         
-        this.StartCoroutine(this.SendMessageLoop(0.05));
+        this.StartCoroutine(this.SendMessageLoop(0.01));
     }
     
     *SendMessageLoop(tick: number)
@@ -74,7 +74,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     
     private SendState(state : CharacterState)
     {
-        console.log(`SendState: ${state}`);
+        //console.log(`SendState: ${state}`);
         const data = new RoomData();
         data.Add("state", state);
         this.room.Send("onChangedState", data.GetObject());
@@ -96,7 +96,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         
         if(player.state === 104){   // || player.state === 106
         //if(player.state === CharacterState.JumpIdle || player.state === CharacterState.JumpMove){
-            console.log("jump");
+            //console.log("jump");
             zepetoPlayer.character.Jump();
         }
             
@@ -137,7 +137,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                
                    
                const playerController = zepetoPlayer.character.gameObject.AddComponent<PlayerController>();
-               playerController.Init();
+               playerController.Init(sessionId);
                
                this.CreateUINickname(sessionId);
            });

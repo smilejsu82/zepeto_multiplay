@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 66fd0ae87cfbb2043b09cd131d55f17f
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    Triggerable extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    console.log(''Triggerable::Start'');\r\n    }\r\n    OnTriggerEnter(col) {\r\n       
+    let isTrigger = false;\r\n        for (let i = 0; i < this.tags.length; i++)
+    {\r\n            if (col.CompareTag(this.tags[i])) {\r\n                isTrigger
+    = true;\r\n                break;\r\n            }\r\n        }\r\n        if
+    (isTrigger) {\r\n            if (this.onTriggerEnter != null) {\r\n               
+    this.onTriggerEnter(col);\r\n            }\r\n        }\r\n    }\r\n    Detecting(enabled)
+    {\r\n        console.log(''Detecting : '' + enabled);\r\n        this.collider.enabled
+    = enabled;\r\n    }\r\n}\r\nexports.default = Triggerable;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHJpZ2dlcmFibGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUcmlnZ2VyYWJsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUtyRCxNQUFxQixXQUFZLFNBQVEscUNBQXFCO0lBTTFELEtBQUs7UUFFRCxPQUFPLENBQUMsR0FBRyxDQUFDLG9CQUFvQixDQUFDLENBQUM7SUFDdEMsQ0FBQztJQUVELGNBQWMsQ0FBQyxHQUFjO1FBRXpCLElBQUksU0FBUyxHQUFHLEtBQUssQ0FBQztRQUN0QixLQUFJLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsQ0FBQyxFQUFFLEVBQUM7WUFDbkMsSUFBRyxHQUFHLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsRUFBQztnQkFDNUIsU0FBUyxHQUFHLElBQUksQ0FBQztnQkFDakIsTUFBTTthQUNUO1NBQ0o7UUFDRCxJQUFHLFNBQVMsRUFBQztZQUVULElBQUcsSUFBSSxDQUFDLGNBQWMsSUFBSSxJQUFJLEVBQUM7Z0JBQzNCLElBQUksQ0FBQyxjQUFjLENBQUMsR0FBRyxDQUFDLENBQUM7YUFDNUI7U0FDSjtJQUNMLENBQUM7SUFFTSxTQUFTLENBQUMsT0FBaUI7UUFFOUIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxjQUFjLEdBQUcsT0FBTyxDQUFDLENBQUM7UUFFdEMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO0lBQ3BDLENBQUM7Q0FFSjtBQW5DRCw4QkFtQ0MifQ==","assetPath":"Assets/Scripts/Triggerable.ts","manifest":{"properties":[{"assembly":"","name":"onTriggerEnter","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"tags","type":"System.String[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.PhysicsModule","name":"collider","type":"UnityEngine.Collider","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Triggerable","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 72779054c39a9e7ff35937dfcf9b1dad
+  onlyWriteTrigger: 0

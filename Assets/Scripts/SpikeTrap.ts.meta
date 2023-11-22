@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 6af0d888e02f6614a9bdcd1b333c9fa5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst Triggerable_1 = require(\"./Triggerable\");\r\nclass
+    SpikeTrap extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.delay = 3;\r\n    }\r\n   
+    Start() {\r\n        console.log(''SpikeTrap::Start'');\r\n        this.triggerable
+    = this.triggerableGo.GetComponent($typeof(Triggerable_1.default));\r\n       
+    this.triggerable.onTriggerEnter = (col) => {\r\n            console.log(''====>
+    '' + col.gameObject);\r\n        };\r\n        this.anim = this.GetComponent($typeof(UnityEngine_1.Animator));\r\n       
+    this.triggerable.Detecting(false);\r\n        this.StartCoroutine(this.Run());\r\n   
+    }\r\n    *Run() {\r\n        while (true) {\r\n            this.Open();\r\n           
+    yield new UnityEngine_1.WaitForSeconds(this.delay);\r\n            this.Close();\r\n           
+    yield new UnityEngine_1.WaitForSeconds(this.delay);\r\n        }\r\n    }\r\n   
+    Open() {\r\n        this.triggerable.Detecting(true);\r\n        this.anim.SetTrigger(\"Open\");\r\n   
+    }\r\n    Close() {\r\n        this.triggerable.Detecting(false);\r\n        this.anim.SetTrigger(\"Close\");\r\n   
+    }\r\n}\r\nexports.default = SpikeTrap;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bpa2VUcmFwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU3Bpa2VUcmFwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDZDQUFrRTtBQUNsRSwrQ0FBdUM7QUFDdkMsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUE1RDs7UUFHVyxVQUFLLEdBQVMsQ0FBQyxDQUFDO0lBcUMzQixDQUFDO0lBakNHLEtBQUs7UUFDRCxPQUFPLENBQUMsR0FBRyxDQUFDLGtCQUFrQixDQUFDLENBQUM7UUFDaEMsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDLFlBQVksU0FBQyxxQkFBVyxFQUFHLENBQUM7UUFFbEUsSUFBSSxDQUFDLFdBQVcsQ0FBQyxjQUFjLEdBQUcsQ0FBQyxHQUFHLEVBQUMsRUFBRTtZQUNyQyxPQUFPLENBQUMsR0FBRyxDQUFDLFFBQVEsR0FBRyxHQUFHLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDM0MsQ0FBQyxDQUFDO1FBRUYsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsWUFBWSxTQUFDLHNCQUFRLEVBQUcsQ0FBQztRQUMxQyxJQUFJLENBQUMsV0FBVyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNsQyxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxHQUFHLEVBQUUsQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFFRCxDQUFDLEdBQUc7UUFFQSxPQUFNLElBQUksRUFBQztZQUNQLElBQUksQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUNaLE1BQU0sSUFBSSw0QkFBYyxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQztZQUNyQyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUM7WUFDYixNQUFNLElBQUksNEJBQWMsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDeEM7SUFDTCxDQUFDO0lBQ08sSUFBSTtRQUVSLElBQUksQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ2pDLElBQUksQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFTyxLQUFLO1FBRVQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDbEMsSUFBSSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsT0FBTyxDQUFDLENBQUM7SUFDbEMsQ0FBQztDQUNKO0FBeENELDRCQXdDQyJ9","assetPath":"Assets/Scripts/SpikeTrap.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"delay","type":"System.Int32","isArray":false,"initValue":["3"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"triggerableGo","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpikeTrap","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 9376265331bbcbe4a6858706041c28ea
+  onlyWriteTrigger: 0
