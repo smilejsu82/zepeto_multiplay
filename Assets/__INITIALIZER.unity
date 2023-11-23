@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1652157745
+GameObject: 
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652157747}
+  - component: {fileID: 1652157746}
+  m_Name: ZepetoScriptContextInitializerComponent
+  m_IsActive: 1
+--- !u!114 &1652157746
+MonoBehaviour:  
+  m_GameObject: {fileID: 1652157745}
+  m_Enabled: 1
+  m_Script: {fileID: -820289043, guid: 921f0445823004a16a499d629dd566a6, type: 3}   
+  initializer: {fileID: 817983362}
+--- !u!4 &1652157747
+Transform:
+  m_GameObject: {fileID: 1652157745}
+--- !u!114 &817983362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2046837767, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetBundle: {fileID: 0}
+  assets:
+  - assetPath: __STREAMINGASSETS
+    asset: {fileID: 0}
+  - assetPath: Assets/Scripts/ClientStarter.ts
+    asset: {fileID: 4458252877524076426, guid: 3204e12319a0ad343836c64b996cbfb0, type: 3}
+  - assetPath: Assets/Scripts/Collisionable.ts
+    asset: {fileID: 4458252877524076426, guid: 4265550debb822043987f2dc4d2606ed, type: 3}
+  - assetPath: Assets/Scripts/CreateModelSceneMain.ts
+    asset: {fileID: 4458252877524076426, guid: b8c196ef0cd6af046878b006fd6a8e28, type: 3}
+  - assetPath: Assets/Scripts/GetVPadInput.ts
+    asset: {fileID: 4458252877524076426, guid: 72f43cc8e9d9cdf4fb145258f3520b0a, type: 3}
+  - assetPath: Assets/Scripts/PlayerController.ts
+    asset: {fileID: 4458252877524076426, guid: 7a0285c9f79f9864eaff033cdb47dc72, type: 3}
+  - assetPath: Assets/Scripts/Scaffolding.ts
+    asset: {fileID: 4458252877524076426, guid: 913b7529685f45e4f99e2f3b05d9a765, type: 3}
+  - assetPath: Assets/Scripts/SpikeTrap.ts
+    asset: {fileID: 4458252877524076426, guid: 6af0d888e02f6614a9bdcd1b333c9fa5, type: 3}
+  - assetPath: Assets/Scripts/SuperJumpBlock.ts
+    asset: {fileID: 4458252877524076426, guid: d98d19fd6d8d5bf439973e6d47d985d8, type: 3}
+  - assetPath: Assets/Scripts/TrapDoor.ts
+    asset: {fileID: 4458252877524076426, guid: 596f3c1eefeeea74c93479bd92f92267, type: 3}
+  - assetPath: Assets/Scripts/Triggerable.ts
+    asset: {fileID: 4458252877524076426, guid: 66fd0ae87cfbb2043b09cd131d55f17f, type: 3}
+  - assetPath: Assets/Scripts/UINickname.ts
+    asset: {fileID: 4458252877524076426, guid: cdd04801926b17a499c48cacfb4a4a78, type: 3}
+  - assetPath: Packages/zepeto.world/Editor/Builds/QRCode.js
+    asset: {fileID: 4458252877524076426, guid: 17c98b61ae4046b5938df3de071ac4b9, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/Scripts/JS/Classes/ZepetoDefaultInputReceiver.js
+    asset: {fileID: 4458252877524076426, guid: bd46341e375f8420d891e82dd4fcc030, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Images/touchpad_handle_base.png
+    asset: {fileID: 2800000, guid: 9ca194b00aabf473e8b0ca5a3eaafffe, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Materials/SuperJump.mat
+    asset: {fileID: 2100000, guid: 0af99f255b207934a9a3ee32ac0a84ed, type: 2}
+  - assetPath: Assets/Materials/Green.mat
+    asset: {fileID: 2100000, guid: 57fdb13629744914d96c0886214e8483, type: 2}
+  - assetPath: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+    asset: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/idle.anim
+    asset: {fileID: 7400000, guid: 77b4b5d8cbed146578a40c13e9fb3e29, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/UI/Controller/touchpad_handle_off.anim
+    asset: {fileID: 7400000, guid: af3a092ab50b042dda8d55bf57df89e2, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/InputActions/ZepetoInputControl.inputactions
+    asset: {fileID: -944628639613478452, guid: 090135bc9e5ee4c89b1642240eb723fe, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/landing_slight.anim
+    asset: {fileID: 7400000, guid: 34a1ea504fe4743649b7fda50421bed6, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/Blade01D.fbx
+    asset: {fileID: 100000, guid: 5ced8aeb49e1ee3418b6badab445c36a, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/action1.anim
+    asset: {fileID: 7400000, guid: aba17ef185d9c42c095e153a36686ba5, type: 2}
+  - assetPath: Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text
+      Component Icon.psd
+    asset: {fileID: 2800000, guid: 2fd6421f253b4ef1a19526541f9ffc0c, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Prefabs/Shadow/FxT_BlobShadow.png
+    asset: {fileID: 2800000, guid: 395d040650de243eb9de0bd417e3b0e9, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SwingTrapD.prefab
+    asset: {fileID: 1661269787379778, guid: ea052a89f68cccb4bb2bac3cdd6ac57c, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/BannerD.fbx
+    asset: {fileID: 100004, guid: fbbfcd251acb5824798ec6df5aafe31c, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/AnimatorController/ZepetoAnimatorV2.controller
+    asset: {fileID: 9100000, guid: d45416f714b4fe74d9ddc118caf5f7c9, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/Gesture/4_ok.anim
+    asset: {fileID: 7400000, guid: 3ac870d7ab2c84c5bad2ade6d493ac0a, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Textures/ColorPaletteRED.png
+    asset: {fileID: 2800000, guid: df91319b80fe8544fa0763ae437d8b79, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/UI/Controller/touchpad_handle_ziggle.anim
+    asset: {fileID: 7400000, guid: d16ef1916c85b4425a7d66ee8f375e19, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/walk.anim
+    asset: {fileID: 7400000, guid: e81fd0a5991d041a592274fbfceff5f6, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/move_run_fast.anim
+    asset: {fileID: 7400000, guid: b37b0c3443ebd4913a439b51a0a3d5a4, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/UI/Controller/touchpad_handle_on.anim
+    asset: {fileID: 7400000, guid: 30e573d0c755644eaa5e1dfa86eb2462, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/TrapDoorRD.fbx
+    asset: {fileID: 100000, guid: 93ddb3ca1b3250f4a80cb786ac68931d, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/move_turn.anim
+    asset: {fileID: 7400000, guid: 93ca3738330d7459b9000923398ae217, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Animation/BannerDAnim.controller
+    asset: {fileID: 9100000, guid: 0ee59b61aee211c4faae96c41b55488c, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Materials/ColorPaletteRED.mat
+    asset: {fileID: 2100000, guid: bef590b5f83718440bddad527c144253, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/landing_deep.anim
+    asset: {fileID: 7400000, guid: 74f4980d8d3dc4a9ea0878dea7e21d06, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Animation/SwingTrapAnimD.anim
+    asset: {fileID: 7400000, guid: d8190137baa0e044ba9dde7b9dbb9ff5, type: 2}
+  - assetPath: Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font
+      Asset Icon.psd
+    asset: {fileID: 2800000, guid: ee148e281f3c41c5b4ff5f8a5afe5a6c, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/BlockS02D.fbx
+    asset: {fileID: 100000, guid: 671aeeba71c544e488f76999081d53f0, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/move_run.anim
+    asset: {fileID: 7400000, guid: 3ee8a1247c52648f5b43bb0e970fdbec, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/jump_idle.anim
+    asset: {fileID: 7400000, guid: 089578e3895fc4828923286f37714b31, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Prefabs/General/BlockS02D.prefab
+    asset: {fileID: 1784946921783176, guid: da069710315859f45b006a49bab26fe9, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/jump_move.anim
+    asset: {fileID: 7400000, guid: ad9db15bb97a241d3941e089707ae455, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Prefabs/UIController_Touchpad_Horizontal.prefab
+    asset: {fileID: 2787167779785370926, guid: 9b7a03709461140b4b3fc85aa8c5d741, type: 3}
+  - assetPath: Assets/Animations/Being Electrocuted.fbx
+    asset: {fileID: 919132149155446097, guid: 64d399bb96a99c04aabb3f95c3c41d87, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/UI/Controller/touchpad_handle_origin_off.anim
+    asset: {fileID: 7400000, guid: 99e7b142bf1c54f4997386f92637a746, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/AnimatorController/UIControllerTouchpadHandleOrigin.controller
+    asset: {fileID: 9100000, guid: 5f288db86f62c406988dd5a253fe2f94, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/landing_roll.anim
+    asset: {fileID: 7400000, guid: aef7b16c4a1b74b95b6f56d4ce91a801, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/Falling.anim
+    asset: {fileID: 7400000, guid: 9beb77817f50f4873bb8dd4a41726d06, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/action2.anim
+    asset: {fileID: 7400000, guid: baa1362d8c18f49c6addf31b8a4c9021, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Animation/SpikeTrapAnimD.anim
+    asset: {fileID: 7400000, guid: 1ec3eca50500be8479d8aee540c8c048, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Prefabs/UIController_Touchpad_Vertical.prefab
+    asset: {fileID: 8523051459139762370, guid: 33446b9369e354b00a7ab43885afbe88, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Images/touchpad_handle_icon.png
+    asset: {fileID: 2800000, guid: c958f44ee4c794bc4915476c48b2df0a, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/BannerHolderLD.fbx
+    asset: {fileID: 100000, guid: ad681b436b88f0744ac5f3f69bd025bd, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/jump_Idle.anim
+    asset: {fileID: 7400000, guid: a42caac19eb044aa195dd25afd2eae3c, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/Stamp.anim
+    asset: {fileID: 7400000, guid: e7729cec6e85b463781eec8565e8fb7c, type: 2}
+  - assetPath: Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputSystemUIInputModule@64.png
+    asset: {fileID: 2800000, guid: 3028dc075ba8c584d9bc7d1e0255e038, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Images/touchpad_jump_icon.png
+    asset: {fileID: 2800000, guid: da6db804593824177bb8ecaab3317f69, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/AnimatorController/UIControllerTouchpadHandle.controller
+    asset: {fileID: 9100000, guid: 844524d99ff1945d1b2985e983f3775c, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Prefabs/Red/BannerStandingRed.prefab
+    asset: {fileID: 1353147416174578, guid: 429669ea6f874eb43bbf97470c68fb12, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/jump_dash.anim
+    asset: {fileID: 7400000, guid: da3fb1523970c40e986536394f9ddb02, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Animation/SpikeTrapD.controller
+    asset: {fileID: 9100000, guid: 642546f7297265349a6a5f13f64f625f, type: 2}
+  - assetPath: Assets/Prefabs/UINickname.prefab
+    asset: {fileID: 6122888497838488348, guid: 72121cf4de98a7340b8e0a16993a0409, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Camera/ZepetoCamera.prefab
+    asset: {fileID: 5806182858035002866, guid: 5be4eddc5b02f4ec0a07a69db26df962, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/run.anim
+    asset: {fileID: 7400000, guid: 69a037643fec04d539fab537f50f143a, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/move_walk_fast.anim
+    asset: {fileID: 7400000, guid: 4d5c25496692b4602b422bc47c03aeee, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Prefabs/Shadow/CharacterShadow.prefab
+    asset: {fileID: 1025544020809228, guid: 4512418b2a1844f42961867ad8421ab8, type: 3}
+  - assetPath: Assets/Maplestory Bold.ttf
+    asset: {fileID: 12800000, guid: 41d4c2815f36e8748a7976b56619c1c0, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Images/touchpad_jump_base.png
+    asset: {fileID: 2800000, guid: 5b13d326a52d8420cb9e4b87f84da3a1, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/jump_move.anim
+    asset: {fileID: 7400000, guid: 4ca7e1aa057824010b3a4417e05f0b3e, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Prefabs/General/Floor01D.prefab
+    asset: {fileID: 1886358935065936, guid: e158d3f5328e1fe4196ecc5d8eebcee8, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/gesture.anim
+    asset: {fileID: 7400000, guid: 298460fd2a0fd41f79d81cfd93cb37e5, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/move_walk.anim
+    asset: {fileID: 7400000, guid: 64a39a4a7a4cb4ba483524044641aa03, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Materials/Grey.mat
+    asset: {fileID: 2100000, guid: 18e0c23b3ae1ab24a94f61d82f8a53b9, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/AnimatorController/ZepetoAnimator.controller
+    asset: {fileID: 9100000, guid: 019901d3486cc411abc6c84594c03743, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Prefabs/Shadow/FxT_BlobShadow.mat
+    asset: {fileID: 2100000, guid: 5104a9f86b024467999136edaf59654f, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Prefabs/EventSystem.prefab
+    asset: {fileID: 7328100774219155841, guid: 67971ba158b48401988f9aad07940d6f, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/idle.anim
+    asset: {fileID: 7400000, guid: dd0408f906f6d4455bfcdea4f2c36bc0, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/Pole01D.fbx
+    asset: {fileID: 100000, guid: b44d9254a0fef834ab376d3bb2ff70c6, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/fall_end.anim
+    asset: {fileID: 7400000, guid: 7af54d170d4a4419e9af291140a5df9e, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/GrateTrapD.fbx
+    asset: {fileID: 100000, guid: 1bb56df4b9ba24840bbfe7e3f0cec5b8, type: 3}
+  - assetPath: Assets/Materials/White.mat
+    asset: {fileID: 2100000, guid: 5e36b334ea9596840b666204156f51a3, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/UI/Controller/touchpad_handle_origin_on.anim
+    asset: {fileID: 7400000, guid: 17b22abf4273e432d99f5151291e7f95, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/V2/jump_double.anim
+    asset: {fileID: 7400000, guid: 0d8dc1582dd594227be179efe817cac7, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/Floor01D.fbx
+    asset: {fileID: 100000, guid: 9785164cfb353eb4d9ae55cc30780781, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/SpearD.fbx
+    asset: {fileID: 100000, guid: 5395c56e03889384398da83042f0b46e, type: 3}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/base/hand_idle_01.anim
+    asset: {fileID: 7400000, guid: a8a227925c3f249ed87a8ceeb839e3d7, type: 2}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Animation/SwingTrapD.controller
+    asset: {fileID: 9100000, guid: 06983a507e20e5e46a58f7f8d1f59a45, type: 2}
+  - assetPath: Packages/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/DefaultInputActions.inputactions
+    asset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  - assetPath: Assets/AurynSky/Dungeon Pack/Models/TrapDoorLD.fbx
+    asset: {fileID: 100000, guid: 3e4ac32a4fae8c84e8974bd48741d3b0, type: 3}
+  - assetPath: Assets/Maplestory Bold SDF.asset
+    asset: {fileID: 11400000, guid: 66f2b696a2939ee4a88a026d853764fc, type: 2}
+  - assetPath: Packages/zepeto.character.controller/Runtime/_Resources/Animations/UI/Controller/touchpad_handle_origin_ziggle.anim
+    asset: {fileID: 7400000, guid: 61185ec652c834c1e91f184f7348bc17, type: 2}
+  resources:
+  - assetPath: ZepetoAnimatorV2
+    asset: {fileID: 9100000, guid: f2f33ee198eb89f4d8e04ab18a3ea65d, type: 2}
+  - assetPath: Fonts & Materials/LiberationSans SDF - Drop Shadow
+    asset: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  - assetPath: Fonts & Materials/LiberationSans SDF - Fallback
+    asset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  - assetPath: Fonts & Materials/LiberationSans SDF - Outline
+    asset: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  - assetPath: Fonts & Materials/LiberationSans SDF
+    asset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - assetPath: LineBreaking Following Characters
+    asset: {fileID: 4900000, guid: fade42e8bc714b018fac513c043d323b, type: 3}
+  - assetPath: LineBreaking Leading Characters
+    asset: {fileID: 4900000, guid: d82c1b31c7e74239bff1220585707d2b, type: 3}
+  - assetPath: Sprite Assets/EmojiOne
+    asset: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45, type: 2}
+  - assetPath: Style Sheets/Default Style Sheet
+    asset: {fileID: 11400000, guid: f952c082cb03451daed3ee968ac6c63e, type: 2}
+  - assetPath: TMP Settings
+    asset: {fileID: 11400000, guid: 3f5b5dff67a942289a9defa416b206f3, type: 2}
+  manifest: {fileID: 11400000, guid: 65644c7bccb03fb45a5dfc79d240cdb2, type: 2}
+  enableCustomTags: 1
+  enableCustomLayers: 0
+  enableResources: 1
