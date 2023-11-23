@@ -16,7 +16,10 @@ export default class SpikeTrap extends ZepetoScriptBehaviour {
         this.triggerable.onTriggerEnter = (col)=>{
             console.log('====> ' + col.gameObject);
 
-            col.gameObject.GetComponent<PlayerController>().Teleport();
+            const playerController = col.gameObject.GetComponent<PlayerController>();
+            playerController.Electric();
+            
+            //col.gameObject.GetComponent<PlayerController>().Teleport();
         };
         
         this.anim = this.GetComponent<Animator>();

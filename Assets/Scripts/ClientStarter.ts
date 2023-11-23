@@ -120,7 +120,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                // ZepetoPlayers.instance.ZepetoCamera.camera.cullingMask = layerMask;
                
                myPlayer.character.OnChangedState.AddListener((cur, next)=>{
-                   console.log(`OnChangedState: cur: ${cur}, next: ${next}`);
+                   //console.log(`OnChangedState: cur: ${cur}, next: ${next}`);
                    this.SendState(cur);
                });
            }); 

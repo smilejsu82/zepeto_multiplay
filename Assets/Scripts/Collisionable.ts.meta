@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 4265550debb822043987f2dc4d2606ed
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    PlayerController_1 = require(\"./PlayerController\");\r\nclass Collisionable
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        console.log(''Triggerable::Start'');\r\n       
+    this.Detecting(true);\r\n    }\r\n    OnCollisionEnter(col) {\r\n        let
+    isCollision = false;\r\n        for (let i = 0; i < this.tags.length; i++) {\r\n           
+    if (col.collider.CompareTag(this.tags[i])) {\r\n                isCollision =
+    true;\r\n                break;\r\n            }\r\n        }\r\n        if (isCollision)
+    {\r\n            console.log(''OnCollisionEnter : '', col);\r\n            if
+    (this.onCollisionEnter != null) {\r\n                this.onCollisionEnter(col);\r\n           
+    }\r\n        }\r\n    }\r\n    OnCollisionExit(col) {\r\n        let isCollision
+    = false;\r\n        for (let i = 0; i < this.tags.length; i++) {\r\n           
+    if (col.collider.CompareTag(this.tags[i])) {\r\n                isCollision =
+    true;\r\n                break;\r\n            }\r\n        }\r\n        if (isCollision)
+    {\r\n            console.log(''OnCollisionExit : '', col);\r\n            if
+    (this.onCollisionExit != null) {\r\n                this.onCollisionExit(col);\r\n           
+    }\r\n        }\r\n    }\r\n    Detecting(enabled) {\r\n        console.log(''Detecting
+    : '' + enabled);\r\n        this.collider.enabled = enabled;\r\n    }\r\n}\r\nexports.default
+    = Collisionable;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29sbGlzaW9uYWJsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbGxpc2lvbmFibGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkVBQTRFO0FBRzVFLHlEQUFpRDtBQUNqRCxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBTzVELEtBQUs7UUFFRCxPQUFPLENBQUMsR0FBRyxDQUFDLG9CQUFvQixDQUFDLENBQUM7UUFDbEMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN6QixDQUFDO0lBRUQsZ0JBQWdCLENBQUMsR0FBZTtRQUU1QixJQUFJLFdBQVcsR0FBRyxLQUFLLENBQUM7UUFDeEIsS0FBSSxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxHQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLENBQUMsRUFBRSxFQUFDO1lBQ25DLElBQUcsR0FBRyxDQUFDLFFBQVEsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFDO2dCQUNyQyxXQUFXLEdBQUcsSUFBSSxDQUFDO2dCQUNuQixNQUFNO2FBQ1Q7U0FDSjtRQUNELElBQUcsV0FBVyxFQUFDO1lBRVgsT0FBTyxDQUFDLEdBQUcsQ0FBQyxxQkFBcUIsRUFBRSxHQUFHLENBQUMsQ0FBQztZQUV4QyxJQUFHLElBQUksQ0FBQyxnQkFBZ0IsSUFBSSxJQUFJLEVBQUM7Z0JBQzdCLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxHQUFHLENBQUMsQ0FBQzthQUM5QjtTQUNKO0lBQ0wsQ0FBQztJQUVELGVBQWUsQ0FBQyxHQUFlO1FBRTNCLElBQUksV0FBVyxHQUFHLEtBQUssQ0FBQztRQUN4QixLQUFJLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsQ0FBQyxFQUFFLEVBQUM7WUFDbkMsSUFBRyxHQUFHLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDLEVBQUM7Z0JBQ3JDLFdBQVcsR0FBRyxJQUFJLENBQUM7Z0JBQ25CLE1BQU07YUFDVDtTQUNKO1FBQ0QsSUFBRyxXQUFXLEVBQUM7WUFFWCxPQUFPLENBQUMsR0FBRyxDQUFDLG9CQUFvQixFQUFFLEdBQUcsQ0FBQyxDQUFDO1lBRXZDLElBQUcsSUFBSSxDQUFDLGVBQWUsSUFBSSxJQUFJLEVBQUM7Z0JBQzVCLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLENBQUM7YUFDN0I7U0FDSjtJQUNMLENBQUM7SUFFTSxTQUFTLENBQUMsT0FBaUI7UUFFOUIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxjQUFjLEdBQUcsT0FBTyxDQUFDLENBQUM7UUFFdEMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO0lBQ3BDLENBQUM7Q0FFSjtBQTFERCxnQ0EwREMifQ==","assetPath":"Assets/Scripts/Collisionable.ts","manifest":{"properties":[{"assembly":"","name":"onCollisionEnter","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"onCollisionExit","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"tags","type":"System.String[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.PhysicsModule","name":"collider","type":"UnityEngine.Collider","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Collisionable","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 0c0abfdbd7be2c4f514e19513c32d9b4
+  onlyWriteTrigger: 0

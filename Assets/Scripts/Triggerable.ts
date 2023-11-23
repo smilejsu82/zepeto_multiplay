@@ -33,7 +33,7 @@ export default class Triggerable extends ZepetoScriptBehaviour {
     
     public Detecting(enabled : boolean)
     {
-        console.log('Detecting : ' + enabled);
+        //console.log('Detecting : ' + enabled);
         
         this.collider.enabled = enabled;
     }

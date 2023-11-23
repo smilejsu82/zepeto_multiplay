@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 596f3c1eefeeea74c93479bd92f92267
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst Collisionable_1 = require(\\\"./Collisionable\\\");\\r\\nclass
+    TrapDoor extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.speed = 1;\\r\\n    }\\r\\n   
+    Start() {\\r\\n        this.leftTrans.SetParent(null);\\r\\n        this.rightTrans.SetParent(null);\\r\\n       
+    this.collisionable = this.collisionableGo.GetComponent($typeof(Collisionable_1.default));\\r\\n       
+    this.collisionable.onCollisionEnter = (col) => {\\r\\n            col.gameObject.transform.SetParent(this.transform);\\r\\n       
+    };\\r\\n        this.collisionable.onCollisionExit = (col) => {\\r\\n           
+    col.gameObject.transform.parent = null;\\r\\n        };\\r\\n        if (this.startDirection
+    == -1) {\\r\\n            this.dir = UnityEngine_1.Vector3.left;\\r\\n       
+    }\\r\\n        else if (this.startDirection == 1) {\\r\\n            this.dir
+    = UnityEngine_1.Vector3.right;\\r\\n        }\\r\\n        this.StartCoroutine(this.CoMove());\\r\\n   
+    }\\r\\n    *CoMove() {\\r\\n        while (true) {\\r\\n            this.transform.Translate(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.op_Multiply(this.dir,
+    this.speed), UnityEngine_1.Time.deltaTime));\\r\\n            if (UnityEngine_1.Vector3.op_Equality(this.dir,
+    UnityEngine_1.Vector3.right)) {\\r\\n                const dis = UnityEngine_1.Vector3.Distance(this.rightTrans.position,
+    this.transform.position);\\r\\n                //console.log(dis);   //4?\\r\\n               
+    if (dis <= 0.1) {\\r\\n                    //\uBC29\uD5A5 \uC804\uD658\\r\\n                   
+    this.dir = UnityEngine_1.Vector3.left;\\r\\n                }\\r\\n           
+    }\\r\\n            else if (UnityEngine_1.Vector3.op_Equality(this.dir, UnityEngine_1.Vector3.left))
+    {\\r\\n                const dis = UnityEngine_1.Vector3.Distance(this.leftTrans.position,
+    this.transform.position);\\r\\n                if (dis <= 0.1) {\\r\\n                   
+    //\uBC29\uD5A5 \uC804\uD658\\r\\n                    this.dir = UnityEngine_1.Vector3.right;\\r\\n               
+    }\\r\\n            }\\r\\n            yield null;\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default
+    = TrapDoor;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHJhcERvb3IuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUcmFwRG9vci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2Q0FBaUU7QUFDakUsbURBQTJDO0FBRTNDLE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFBM0Q7O1FBS1csVUFBSyxHQUFZLENBQUMsQ0FBQztJQXdEOUIsQ0FBQztJQWxERyxLQUFLO1FBRUQsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDL0IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFFaEMsSUFBSSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMsZUFBZSxDQUFDLFlBQVksU0FBQyx1QkFBYSxFQUFHLENBQUM7UUFDeEUsSUFBSSxDQUFDLGFBQWEsQ0FBQyxnQkFBZ0IsR0FBRyxDQUFDLEdBQUcsRUFBQyxFQUFFO1lBQ3pDLEdBQUcsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDdkQsQ0FBQyxDQUFDO1FBQ0YsSUFBSSxDQUFDLGFBQWEsQ0FBQyxlQUFlLEdBQUcsQ0FBQyxHQUFHLEVBQUMsRUFBRTtZQUN4QyxHQUFHLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1FBQzNDLENBQUMsQ0FBQztRQUVGLElBQUcsSUFBSSxDQUFDLGNBQWMsSUFBSSxDQUFDLENBQUMsRUFBQztZQUN6QixJQUFJLENBQUMsR0FBRyxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFDO1NBQzNCO2FBQUssSUFBRyxJQUFJLENBQUMsY0FBYyxJQUFJLENBQUMsRUFBQztZQUM5QixJQUFJLENBQUMsR0FBRyxHQUFHLHFCQUFPLENBQUMsS0FBSyxDQUFDO1NBQzVCO1FBRUQsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQztJQUN2QyxDQUFDO0lBRUQsQ0FBQyxNQUFNO1FBRUgsT0FBTSxJQUFJLEVBQUM7WUFDUCxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0F2Q3JCLHFCQUFPLENBZ0V1L25CLFdBQVksQ0FoRTFnb0IscUJBQU8sQ0FnRXUvbkIsV0FBWSxDQXpCbi9uQixJQUFJLENBQUMsR0FBRyxFQUFHLElBQUksQ0FBQyxLQUFLLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUMsQ0FBQztZQUVsRSxJQXpDRyxxQkFBTyxDQWdFeXhvQixXQUFZLENBdkI1eW9CLElBQUksQ0FBQyxHQUFHLEVBQUkscUJBQU8sQ0FBQyxLQUFLLEdBQUM7Z0JBRXpCLE1BQU0sR0FBRyxHQUFHLHFCQUFPLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUM7Z0JBRWhGLDBCQUEwQjtnQkFFMUIsSUFBRyxHQUFHLElBQUksR0FBRyxFQUFDO29CQUNWLE9BQU87b0JBQ1AsSUFBSSxDQUFDLEdBQUcsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FBQztpQkFDM0I7YUFFSjtpQkFBSyxJQXBESCxxQkFBTyxDQWdFeXhvQixXQUFZLENBWnR5b0IsSUFBSSxDQUFDLEdBQUcsRUFBSSxxQkFBTyxDQUFDLElBQUksR0FBQztnQkFDOUIsTUFBTSxHQUFHLEdBQUcscUJBQU8sQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQztnQkFDL0UsSUFBRyxHQUFHLElBQUksR0FBRyxFQUFDO29CQUNWLE9BQU87b0JBQ1AsSUFBSSxDQUFDLEdBQUcsR0FBRyxxQkFBTyxDQUFDLEtBQUssQ0FBQztpQkFDNUI7YUFDSjtZQUVELE1BQU0sSUFBSSxDQUFDO1NBQ2Q7SUFDTCxDQUFDO0NBRUo7QUE3REQsMkJBNkRDIn0=\",\"assetPath\":\"Assets/Scripts/TrapDoor.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"startDirection\",\"type\":\"System.Int32\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"speed\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"1\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"collisionableGo\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"leftTrans\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"rightTrans\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"TrapDoor\",\"description\":\"\",\"hasAnimatorMove\":false},\"isCompiled\":true}"
+  typescriptHash: df036663f966ce0ebb924c78ab512dc9
+  onlyWriteTrigger: 0

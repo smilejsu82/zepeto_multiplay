@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: d98d19fd6d8d5bf439973e6d47d985d8
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst Collisionable_1 = require(\"./Collisionable\");\r\nclass
+    SuperJumpBlock extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        this.collisionable = this.collisionableGo.GetComponent($typeof(Collisionable_1.default));\r\n       
+    this.collisionable.onCollisionEnter = (col) => {\r\n            col.collider.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)).additionalJumpPower
+    = 7;\r\n        };\r\n        this.collisionable.onCollisionExit = (col) => {\r\n           
+    col.collider.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)).additionalJumpPower
+    = 0;\r\n        };\r\n    }\r\n}\r\nexports.default = SuperJumpBlock;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3VwZXJKdW1wQmxvY2suanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTdXBlckp1bXBCbG9jay50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2RUFBNkQ7QUFDN0QsNkNBQWtEO0FBQ2xELG1EQUEyQztBQUMzQyxNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBRzdELEtBQUs7UUFFRCxJQUFJLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUMsWUFBWSxTQUFDLHVCQUFhLEVBQUcsQ0FBQztRQUN4RSxJQUFJLENBQUMsYUFBYSxDQUFDLGdCQUFnQixHQUFHLENBQUMsR0FBRyxFQUFFLEVBQUU7WUFDMUMsR0FBRyxDQUFDLFFBQVEsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDZDQUFlLEdBQUksbUJBQW1CLEdBQUcsQ0FBQyxDQUFDO1FBQ3BGLENBQUMsQ0FBQztRQUNGLElBQUksQ0FBQyxhQUFhLENBQUMsZUFBZSxHQUFHLENBQUMsR0FBRyxFQUFFLEVBQUU7WUFDekMsR0FBRyxDQUFDLFFBQVEsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDZDQUFlLEdBQUksbUJBQW1CLEdBQUcsQ0FBQyxDQUFDO1FBQ3BGLENBQUMsQ0FBQztJQUNOLENBQUM7Q0FDSjtBQWJELGlDQWFDIn0=","assetPath":"Assets/Scripts/SuperJumpBlock.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"collisionableGo","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SuperJumpBlock","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 244e454c1462c3ba6f78a33b89ef8048
+  onlyWriteTrigger: 0
